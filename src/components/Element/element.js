@@ -1,11 +1,12 @@
-import React from 'react';
-
+import React, {Fragment} from 'react';
+import Presenter from '../Presenter'
+import Editor from '../Editor'
 
 const Element=()=> {
   return (
-    <div>
-      Element
-    </div>
+    <Fragment>
+      <Presenter/>
+    </Fragment>
   );
 }
 export default Element
