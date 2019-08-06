@@ -1,0 +1,54 @@
+@font-face{
+    font-family: NotoSans;
+    src: url(./assets/fonts/notosans.woff);
+}
+@font-face{
+    font-family: NotoSansBold;
+    src: url(./assets/fonts/notosansbold.woff);
+}
+@font-face{
+    font-family: RussoOne;
+    src: url(./assets/fonts/RussoOne-Regular.woff);
+}
+body{
+    font-family: NotoSans;
+}
+#root{
+    height: 100vh;
+}
+.forExport{
+    height: 70vh;
+    background-color: #fff;
+}
+.builderController{
+    height: 30vh;
+    background-color: #dce8dc;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.builderMain{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 1px dotted silver;
+}
+.builderMain button{
+    margin: 15px;
+    width: 150px;
+    height: 30px;
+    color: #fff;
+    border: none;
+    box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.1);
+    font-family: NotoSans,sans-serif;
+    border-radius: 3px;
+}
+.builderMain button:hover{
+    box-shadow: 0px 10px 10px 0px rgba(50, 50, 50, 0.1);
+}
+.builderMain button:first-child{
+    background-color: blue;
+}
+.builderMain button:last-child{
+    background-color: #e0ae52;
+}
