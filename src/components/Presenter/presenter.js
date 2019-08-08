@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-
-const Presenter=()=> {
+import 'bootstrap/dist/css/bootstrap.min.css';
+const Presenter=(props)=> {
   const [uniT, setUnit]=useState('px');
   const [height, setHeight]=useState(25+uniT);
   const [width, setWidth]=useState(25+uniT);
@@ -29,13 +29,22 @@ const ChildComponent = ({ onClick, count }) => {
   )
 };
   */
+  
+  const count=Math.floor(12/props.columns)
+  const allCol=()=>{
+    let col="col-md-"+count
+    let temp=[];
+    for(var i=0; i<props.columns;i++){
+     temp.push(<div className={col}>Col</div>)
+    }
+    return temp;
+  }
+  const body=allCol()
   return (
     <section >
       <div className="container">
         <div className="row">
-          <div className="col-md-12">
-            section
-          </div>
+          {body}
         </div>
       </div>
     </section>

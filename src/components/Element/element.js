@@ -1,11 +1,18 @@
-import React, {Fragment} from 'react';
+import React, {Fragment, useState} from 'react';
 import Presenter from '../Presenter'
 import Editor from '../Editor'
 
 const Element=()=> {
+  const [colCount, changeColCount]=useState(1)
+
+  const manipCol=(c)=>{
+    changeColCount(c)
+  }
+
   return (
     <Fragment>
-      <Presenter/>
+      <Presenter columns={colCount}/>
+      <Editor manip={manipCol}/>
     </Fragment>
   );
 }
