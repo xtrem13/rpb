@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const Presenter=(props)=> {
-  const [uniT, setUnit]=useState('px');
-  const [height, setHeight]=useState(25+uniT);
-  const [width, setWidth]=useState(25+uniT);
-  const [border, setborder]=useState(1+uniT+' dotted black');
+
   /* 
   function PageComponent() {
   const [count, setCount] = useState(0);
@@ -41,7 +38,7 @@ const ChildComponent = ({ onClick, count }) => {
   }
   const body=allCol()
   return (
-    <section >
+    <section style={props.style} >
       <div className="container">
         <div className="row">
           {body}

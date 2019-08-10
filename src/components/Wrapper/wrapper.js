@@ -4,9 +4,35 @@ import './wrapper.css'
 
 const Wrapper = () => {
   const [elements, addElement] = useState([0]);
-
+  const unit='px'
+  const defaultStyle=[
+    {
+      backgroundColor: 'red',
+    },
+    {
+      backgroundColor: 'cyan'
+    },
+    {
+      backgroundColor: 'silver'
+    },
+    {
+      backgroundColor: 'pink'
+    },
+    {
+      backgroundColor: 'green'
+    },
+    {
+      backgroundColor: 'yellow'
+    },
+    {
+      backgroundColor: 'black'
+    },
+    {
+      backgroundColor: 'brown'
+    }
+  ]
   var body = elements.map(i => {
-    return <Element key={i} />
+    return <Element style={defaultStyle[i]} key={i} />
   })
   const addSection = (e) => {
     let newElement = elements[elements.length - 1] + 1
